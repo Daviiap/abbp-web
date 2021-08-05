@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <!-- PAGE INFO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscrição</title>
+
+    <!-- Icones -->
+    <link rel="stylesheet" href="../assets/fonts/style.css" />
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="../inscricao/style_inscricao.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <nav class="container">
+        <div class="caixalogo">
+          <a href="../index.html"
+            ><img src="../img/logoheader.gif" alt="logo marca da abbp"
+          /></a>
+          <a class="logo" href="../index.html">Circuito<span>Abbp</span> </a>
+        </div>
+        <!-- menu -->
+        <div class="menu">
+          <ul class="grid">
+            <li><a class="title" href="../index.html#home">Início</a></li>
+            <li>
+              <a class="title" href="../index.html#parceiros">Parceiros</a>
+            </li>
+            <li>
+              <a class="title" href="../index.html#about">Nossa História</a>
+            </li>
+            <li>
+              <a class="title" href="../index.html#services">Calendário</a>
+            </li>
+            <li>
+              <a class="title" href="../filiacao/filiacao.html">Filiação</a>
+            </li>
+            <li>
+              <a class="title" href="#inscricao">Inscrição</a>
+            </li>
+            <li>
+              <a class="title" href="../resultado/resultado.html">Resultados</a>
+            </li>
+            <li>
+              <a class="title" href="../index.html#testimonials">Equipe Abbp</a>
+            </li>
+            <li><a class="title" href="../index.html#contact">Contato</a></li>
+          </ul>
+        </div>
+        <!-- /menu -->
+        <div class="toggle icon-menu"></div>
+        <div class="toggle icon-close"></div>
+      </nav>
+    </header>
+
+    <main>
+      <!--  INSCRIÇÃO -->
+      <section class="section" id="inscricao">
+        <div class="container">
+          <div class="baner">
+            <img
+              src="../img/parceiros/baner_parceiros.gif"
+              alt="imagem de todos os apoiadores"
+            />
+          </div>
+        </div>
+
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Inscrição</h2>
+            <p>
+              O Circuito Abbp de BodyBoarding é o circuito mais tradicional do
+              Brasil. Criado no ano de 1993 pelo body boarder pernambucano Beri
+              Santana, se destaca por sua organização, estrutura e uma boa
+              premiação, sempre valorizando o atleta e o público presente na
+              praia. Por isso convidamos você para conhecer um pouco da história
+              de nossa trajetória até os dias de hoje e conhecer também toda a
+              equipe por trás deste grande projeto para o esporte.
+            </p>
+          </div>
+          <div class="container formulario">
+            <div id="form">
+              <div class="cabecalho">
+                <img
+                  src="../img/logoheader.gif"
+                  alt="imagem da logo marca da abbp"
+                />
+                <h2>Circuito Abbp de BodyBoarding<br />Ficha de Inscrição</h2>
+              </div>
+
+              <form action="submit" id="form_inscricao">
+                <div class="input-group">
+                  <label class="sr-only" for="name">Nome</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Nome"
+                    required
+                    autofocus
+                  />
+                  <span class="error"></span>
+                </div>
+
+                <div class="input-group">
+                  <label for="categoria" class="sr-only"> Categoria </label>
+                  <input
+                    type="text"
+                    id="categoria"
+                    name="categoria"
+                    list="listacategoria"
+                    placeholder="Categoria"
+                    required
+                  />
+                  <span class="error"></span>
+                </div>
+
+                <div class="input-group">
+                  <label for="patrocinio" class="sr-only">Patrocínio</label>
+                  <input
+                    type="text"
+                    id="patrocinio"
+                    name="patrocinio"
+                    placeholder="Patrocínio"
+                  />
+                  <span class="error"></span>
+                </div>
+
+                <div class="input-group">
+                  <label for="endereco" class="sr-only">Endereço</label>
+                  <input
+                    type="text"
+                    id="endereco"
+                    name="endereco"
+                    placeholder="Endereço"
+                    required
+                  />
+                  <span class="error"></span>
+                </div>
+
+                <div class="cidadebairro">
+                  <div class="input-group">
+                    <label for="cidade" class="sr-only">Cidade </label>
+                    <input
+                      type="text"
+                      id="cidade"
+                      name="cidade"
+                      placeholder="Cidade"
+                      required
+                    />
+                    <span class="error"></span>
+                  </div>
+
+                  <div class="input-group">
+                    <label for="bairro" class="sr-only">Bairro </label>
+                    <input
+                      type="text"
+                      id="bairro"
+                      name="bairro"
+                      placeholder="Bairro"
+                      required
+                    />
+                    <span class="error"></span>
+                  </div>
+                </div>
+
+                <div class="telefonecep">
+                  <div class="input-group">
+                    <label for="cep" class="sr-only">CEP </label>
+                    <input type="text" id="cep" name="cep" placeholder="CEP" />
+                    <span class="error"></span>
+                  </div>
+
+                  <div class="input-group">
+                    <label for="telefone" class="sr-only">Telefone </label>
+                    <input
+                      type="text"
+                      id="telefone"
+                      name="telefone"
+                      placeholder="Telefone"
+                      required
+                    />
+                    <span class="error"></span>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <label class="sr-only" for="email">E-mail</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    minlength="10"
+                    size="50"
+                    placeholder="E-mail"
+                    required
+                  />
+                  <span class="error"></span>
+                </div>
+
+                <div class="termo">
+                  <h2>Termo de Responsabilidade</h2>
+                  <input type="checkbox" id="termo" name="termo" required />
+                  <label form="termo"
+                    >Comprometo-me pela presente acatar as determinações da
+                    comissão organizadora de acordo com o código de disciplina e
+                    o regulamento da competição. O(s) patrocinador(es) bem como
+                    a organização estão isentos de quaisquer responsabilidades
+                    civis referentes a acidentes ligados diretamente ao evento,
+                    bem como autorizo a utilização de minha imagem como
+                    competidor para qualquer finaliadde relacionada ao evento em
+                    questão.</label
+                  >
+                </div>
+
+                <!--<div class="data">
+                  <label for="date" class="sr-only">Data</label>
+                  <input type="date" id="date" name="date" required />
+                </div>-->
+
+                <div class="redes">
+                  <div class="input-group">
+                    <label for="whatsapp" class="sr-only">Whatsapp </label>
+                    <input
+                      type="text"
+                      id="whatsapp"
+                      name="whatsapp"
+                      placeholder="Whatsapp"
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="instagram" class="sr-only">Instagram </label>
+                    <input
+                      type="text"
+                      id="instagram"
+                      name="instagram"
+                      placeholder="Instagram"
+                    />
+                  </div>
+                </div>
+
+                <div class="input-group actions">
+                  <button class="button cancel" type="reset">Cancelar</button>
+                  <button type="submit" id="submit_inscricao_button"><strong>Enviar</strong></button>
+                </div>
+
+                <datalist id="listacategoria">
+                  <option>Profissional</option>
+                  <option>Amador</option>
+                  <option>Open</option>
+                  <option>Feminino</option>
+                  <option>Master</option>
+                  <option>Gran Master</option>
+                  <option>Legend</option>
+                  <option>DK</option>
+                </datalist>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="section">
+      <div class="container grid">
+        <div class="brand">
+          <a class="logo logo-alt" href="#home">Circuito<span>Abbp</span></a>
+          <p>©2021 CircuitoAbbp.</p>
+          <p>Todos os direitos reservados.</p>
+        </div>
+
+        <div class="social grid">
+          <a href="https://instagram.com/abbpcircuito/" target="_blank">
+            <i class="icon-instagram"></i>
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <i class="icon-facebook"></i
+          ></a>
+          <i class="icon-youtube"></i>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#inscricao" class="back-to-top"><i class="icon-arrow-up"></i></a>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- main.js -->
+    <script src="../main.js"></script>
+    <script src="./script_inscricao.js"></script>
+  </body>
+</html>
