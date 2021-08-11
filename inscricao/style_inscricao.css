@@ -125,7 +125,7 @@ body {
 }
 
 .section {
-  padding: calc(5rem + var(--header-height)) 0;
+  padding: 5rem 0;
 }
 
 .section .title {
@@ -414,9 +414,14 @@ input {
   width: 100%;
 }
 
+#inscricao .obrigatorio span {
+  color: red;
+}
+
 .cidadebairro,
 .telefonecep,
-.redes {
+.redes,
+.categoriagenero {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -424,8 +429,9 @@ input {
 }
 .cidadebairro .input-group,
 .telefonecep .input-group,
-.redes .input-group {
-  width: 100%;
+.redes .input-group,
+.categoriagenero .input-group {
+  width: 46%;
 }
 
 .cabecalho {
@@ -465,7 +471,22 @@ input {
 
 .input-group.actions .button,
 .input-group.actions button {
-  width: 49%;
+  width: 48%;
+}
+
+input:invalid + span:after {
+  position: absolute;
+  content: 'x';
+  padding-left: 5px;
+  color: #ff0000;
+  margin-top: 0.4rem;
+}
+
+input:valid + span:after {
+  position: absolute;
+  content: '✓';
+  padding-left: 5px;
+  color: #009000;
 }
 
 /* swiper */
@@ -608,6 +629,13 @@ footer .social i:hover {
 
   .input-group.actions {
     margin-top: 1.5rem;
+  }
+
+  .cidadebairro .input-group,
+  .telefonecep .input-group,
+  .redes .input-group,
+  .categoriagenero .input-group {
+    width: 48%;
   }
 
   footer .logo {

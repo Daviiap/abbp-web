@@ -103,6 +103,10 @@
                 <h2>Circuito Abbp de BodyBoarding<br />Ficha de Inscrição</h2>
               </div>
 
+              <div class="obrigatorio">
+                <p><span>x</span> - campo obrigatório</p>
+              </div>
+
               <form action="submit" id="form_inscricao">
                 <div class="input-group">
                   <label class="sr-only" for="name">Nome</label>
@@ -112,22 +116,36 @@
                     name="name"
                     placeholder="Nome"
                     required
-                    autofocus
                   />
                   <span class="error"></span>
                 </div>
 
-                <div class="input-group">
-                  <label for="categoria" class="sr-only"> Categoria </label>
-                  <input
-                    type="text"
-                    id="categoria"
-                    name="categoria"
-                    list="listacategoria"
-                    placeholder="Categoria"
-                    required
-                  />
-                  <span class="error"></span>
+                <div class="categoriagenero">
+                  <div class="input-group">
+                    <label for="categoria" class="sr-only"> Categoria </label>
+                    <input
+                      type="text"
+                      id="categoria"
+                      name="categoria"
+                      list="listacategoria"
+                      placeholder="Categoria"
+                      required
+                    />
+                    <span class="error"></span>
+                  </div>
+
+                  <div class="input-group">
+                    <label for="genero" class="sr-only"> Gênero </label>
+                    <input
+                      type="text"
+                      id="genero"
+                      name="genero"
+                      list="listagenero"
+                      placeholder="Gênero"
+                      required
+                    />
+                    <span class="error"></span>
+                  </div>
                 </div>
 
                 <div class="input-group">
@@ -182,17 +200,25 @@
                 <div class="telefonecep">
                   <div class="input-group">
                     <label for="cep" class="sr-only">CEP </label>
-                    <input type="text" id="cep" name="cep" placeholder="CEP" />
+                    <input
+                      type="tel"
+                      id="cep"
+                      name="cep"
+                      placeholder="CEP"
+                      maxlength="9"
+                      required
+                    />
                     <span class="error"></span>
                   </div>
 
                   <div class="input-group">
                     <label for="telefone" class="sr-only">Telefone </label>
                     <input
-                      type="text"
+                      type="tel"
                       id="telefone"
                       name="telefone"
                       placeholder="Telefone"
+                      maxlength="15"
                       required
                     />
                     <span class="error"></span>
@@ -238,10 +264,11 @@
                   <div class="input-group">
                     <label for="whatsapp" class="sr-only">Whatsapp </label>
                     <input
-                      type="text"
+                      type="tel"
                       id="whatsapp"
                       name="whatsapp"
                       placeholder="Whatsapp"
+                      maxlength="15"
                     />
                   </div>
                   <div class="input-group">
@@ -257,18 +284,26 @@
 
                 <div class="input-group actions">
                   <button class="button cancel" type="reset">Cancelar</button>
-                  <button type="submit" id="submit_inscricao_button"><strong>Enviar</strong></button>
+                  <button type="submit" id="submit_inscricao_button">
+                    <strong>Enviar</strong>
+                  </button>
                 </div>
 
                 <datalist id="listacategoria">
-                  <option>Profissional</option>
+                  <option>Pro-Am</option>
                   <option>Amador</option>
-                  <option>Open</option>
-                  <option>Feminino</option>
                   <option>Master</option>
                   <option>Gran Master</option>
                   <option>Legend</option>
+                  <option>Grand Legend</option>
+                  <option>Iniciante</option>
+                  <option>Escolinha</option>
                   <option>DK</option>
+                </datalist>
+
+                <datalist id="listagenero">
+                  <option>Masculino</option>
+                  <option>Feminino</option>
                 </datalist>
               </form>
             </div>

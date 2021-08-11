@@ -31,7 +31,7 @@ h2 span {
 
   /* HSL color mode */
   --base-color: hsl(var(--hue) 100% 50%);
-  --base-color-second: hsl(var(--hue) 100% 40%);
+  --base-color-second: hsl(var(--hue) 100% 50%);
   --base-color-alt: hsl(var(--hue) 100% 50%);
   --title-color: hsl(var(--hue) 100% 0%);
   --text-color: hsl(0 0% 46%);
@@ -74,6 +74,11 @@ body {
   border-radius: 0.25rem;
   font: 500 1rem var(--body-font);
   transition: background 0.3s;
+}
+
+#home .button.pesquisa {
+  box-shadow: 10px 10px 12px rgba(99, 97, 97, 2);
+  height: 3rem;
 }
 
 .button:hover {
@@ -167,6 +172,13 @@ body {
   width: 23%;
   height: auto;
   align-items: center;
+}
+
+#login-senha {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .logo {
@@ -334,6 +346,29 @@ nav.show div.icon-close {
 
 #home .text p {
   margin-bottom: 2rem;
+}
+
+/*====  PÁGINA DE RESPOSTA ============================ */
+.text-resposta {
+  font: 700 1.6rem var(--title-font);
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;
+}
+
+#resposta .text-resposta h2 span {
+  color: green;
+}
+
+#resposta .container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+/*====  PÁGINA DE admin ============================ */
+.admin {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 /*====  PARCEIROS ============================ */
@@ -687,7 +722,7 @@ input {
   color: var(--base-color);
 }
 
-/*====  FOOTER ============================ */
+/*=======================  FOOTER ========================== */
 footer {
   background: var(--base-color);
 }
@@ -762,11 +797,32 @@ footer .social i:hover {
   }
 }
 
+/* large devices: 420 > */
+@media (min-width: 420px) {
+  .text-resposta {
+    padding: 0.5rem 0;
+  }
+}
+
 /* large devices: 765 > */
 @media (min-width: 765px) {
   /* services */
   #testimonials .cards {
     grid-template-columns: 1fr 1fr;
+  }
+
+  #home .button.pesquisa {
+    box-shadow: 10px 10px 12px rgba(99, 97, 97, 2);
+    height: 3rem;
+  }
+
+  #resposta .container {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .text-resposta {
+    padding: 4rem 0;
   }
 
   .swiper-button-prev,
@@ -828,6 +884,15 @@ footer .social i:hover {
     --subtitle-font-size: 1.125rem;
   }
 
+  .text-resposta {
+    padding: 2.8rem 0;
+  }
+
+  #resposta .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   /* reusable classes */
   .container {
     max-width: 1004px;
@@ -855,8 +920,9 @@ footer .social i:hover {
     margin-right: auto;
   }
 
-  .button {
-    height: 3.125rem;
+  #home .button.pesquisa {
+    box-shadow: 10px 10px 12px rgba(99, 97, 97, 2);
+    height: 3rem;
   }
 
   /* navigation */
@@ -1010,6 +1076,19 @@ footer .social i:hover {
     margin-right: auto;
   }
 
+  .text-resposta {
+    padding: 3.2rem 0;
+  }
+  /* pagina administrador */
+  #admin.section {
+    padding: 0 0 20rem 0;
+  }
+
+  #resposta .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .section {
     padding: 10rem 0;
   }
@@ -1030,10 +1109,10 @@ footer .social i:hover {
     margin-right: auto;
   }
 
-  .button {
-    height: 3.125rem;
+  #home .button.pesquisa {
+    box-shadow: 10px 10px 12px rgba(99, 97, 97, 2);
+    height: 3rem;
   }
-
   /* navigation */
   nav .menu {
     opacity: 1;
@@ -1140,5 +1219,53 @@ footer .social i:hover {
 @media (min-width: 1400px) {
   #testimonials p span {
     left: -2.5rem;
+  }
+
+  #home a .button.pesquisa {
+    box-shadow: 10px 10px 12px rgba(99, 97, 97, 2);
+    height: 3rem;
+  }
+}
+
+/* large devices: 1700 > */
+@media (min-width: 1630px) {
+  .text-resposta {
+    padding: 5rem 0;
+  }
+
+  #home a .button.pesquisas {
+    box-shadow: 10px 10px 12px rgba(99, 97, 97, 2);
+    height: 1rem;
+  }
+
+  .pesquisa {
+    padding: 7rem 0;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+  }
+
+  .formulario {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .button-pesquisa button {
+    background-color: green;
+    color: var(--text-color-light);
+    height: 2.9rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 2rem;
+    border-radius: 0.25rem;
+    border: 1px solid green;
+    font: 500 1rem var(--body-font);
+    transition: background 0.3s;
+  }
+
+  .button-pesquisa button:hover {
+    background-color: white;
+    color: green;
   }
 }

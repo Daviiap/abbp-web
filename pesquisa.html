@@ -4,7 +4,7 @@
     <!-- PAGE INFO -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Filiação</title>
+    <title>Pesquisa</title>
 
     <!-- Icones -->
     <link rel="stylesheet" href="../assets/fonts/style.css" />
@@ -16,7 +16,7 @@
     />
 
     <!-- STYLES -->
-    <link rel="stylesheet" href="../filiacao/style_filiacao.css" />
+    <link rel="stylesheet" href="./filiacao/style_filiacao.css" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -34,7 +34,7 @@
           /></a>
           <a class="logo" href="../index.html">Circuito<span>Abbp</span> </a>
         </div>
-        <!-- menu -->
+        <!-- menu 
         <div class="menu">
           <ul class="grid">
             <li><a class="title" href="../index.html#home">Início</a></li>
@@ -59,7 +59,7 @@
             </li>
             <li><a class="title" href="../index.html#contact">Contato</a></li>
           </ul>
-        </div>
+        </div>-->
         <!-- /menu -->
         <div class="toggle icon-menu"></div>
         <div class="toggle icon-close"></div>
@@ -80,15 +80,13 @@
 
         <div class="container grid">
           <div class="text">
-            <h2 class="title">Filiação</h2>
+            <h2 class="title"><span>Pesquisa</span></h2>
             <p>
-              O Circuito Abbp de BodyBoarding é o circuito mais tradicional do
-              Brasil. Criado no ano de 1993 pelo body boarder pernambucano Beri
-              Santana, se destaca por sua organização, estrutura e uma boa
-              premiação, sempre valorizando o atleta e o público presente na
-              praia. Por isso convidamos você para conhecer um pouco da história
-              de nossa trajetória até os dias de hoje e conhecer também toda a
-              equipe por trás deste grande projeto para o esporte.
+              Obrigado por participar de nossa pesquisa, para nós é muito
+              importante saber sobre você, saber do que você gosta para que
+              possamos cada vez mais dirigir nossas ações para a melhoria do
+              atendimento ao atleta e ao público que participa de nossos
+              eventos.
             </p>
           </div>
           <div class="container formulario">
@@ -98,7 +96,7 @@
                   src="../img/logoheader.gif"
                   alt="imagem da logo marca da abbp"
                 />
-                <h2>Circuito Abbp de BodyBoarding<br />Ficha de Filiação</h2>
+                <h2>Circuito Abbp de BodyBoarding<br />Pesquisa</h2>
               </div>
 
               <div class="obrigatorio">
@@ -406,7 +404,13 @@
 
                 <div class="input-group actions">
                   <button class="button cancel" type="reset">Cancelar</button>
-                  <button type="submit"><strong>Enviar</strong></button>
+                  <button
+                    type="submit"
+                    onclick="window.open('resposta.html');"
+                    target="_self"
+                  >
+                    <strong>Enviar</strong>
+                  </button>
                 </div>
 
                 <datalist id="listasimnao">
@@ -498,6 +502,6 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- main.js -->
-    <script src="../main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>

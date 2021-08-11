@@ -125,7 +125,7 @@ body {
 }
 
 .section {
-  padding: calc(5rem + var(--header-height)) 0;
+  padding: 5rem 0;
 }
 
 .section .title {
@@ -319,8 +319,8 @@ nav.show div.icon-close {
 }
 
 #filiacao .container {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 #filiacao .text {
@@ -340,6 +340,10 @@ nav.show div.icon-close {
 
 #filiacao .text p {
   margin-bottom: 3rem;
+}
+
+#filiacao .obrigatorio span {
+  color: red;
 }
 
 #filiacao .baner {
@@ -416,7 +420,11 @@ input {
 
 .cidadebairro,
 .telefonecep,
-.redes {
+.redes,
+.atletagenero,
+.tamanho-cor,
+.bermuda-sapato,
+.fruta-prato {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -424,8 +432,12 @@ input {
 }
 .cidadebairro .input-group,
 .telefonecep .input-group,
-.redes .input-group {
-  width: 100%;
+.redes .input-group,
+.atletagenero .input-group,
+.tamanho-cor .input-group,
+.bermuda-sapato .input-group,
+.fruta-prato .input-group {
+  width: 46%;
 }
 
 .cabecalho {
@@ -434,6 +446,7 @@ input {
   justify-content: space-between;
   margin-bottom: 1rem;
 }
+
 .cabecalho h2 {
   text-align: right;
   font-size: 1.1rem;
@@ -441,16 +454,12 @@ input {
   margin-top: 0;
   color: black;
 }
+
 .cabecalho img {
   width: 27%;
   height: auto;
 }
-.termo h2 {
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 0.6rem;
-  color: red;
-}
+
 .data {
   margin-top: 0.7rem;
   margin-bottom: 0.7rem;
@@ -465,7 +474,23 @@ input {
 
 .input-group.actions .button,
 .input-group.actions button {
-  width: 49%;
+  width: 48%;
+}
+
+input:invalid + span:after {
+  position: absolute;
+  content: 'x';
+  padding-left: 5px;
+  color: #ff0000;
+  margin-top: 0.4rem;
+}
+
+input:valid + span:after {
+  position: absolute;
+  content: '✓';
+  padding-left: 5px;
+  color: #009000;
+  margin-top: 0.4rem;
 }
 
 /* swiper */
@@ -597,10 +622,6 @@ footer .social i:hover {
     height: auto;
   }
 
-  .termo h2 {
-    margin-top: 1.5rem;
-  }
-
   .data {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
@@ -608,6 +629,26 @@ footer .social i:hover {
 
   .input-group.actions {
     margin-top: 1.5rem;
+  }
+
+  .cidadebairro .input-group,
+  .telefonecep .input-group,
+  .redes .input-group,
+  .atletagenero .input-group,
+  .tamanho-cor .input-group,
+  .bermuda-sapato .input-group,
+  .fruta-prato .input-group,
+  .alergiatipo .input-group,
+  .pico-pe .input-group {
+    width: 47%;
+  }
+
+  .alergiatipo,
+  .pico-pe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
   }
 
   footer .logo {
@@ -633,7 +674,7 @@ footer .social i:hover {
 
   /* reusable classes */
   .container {
-    max-width: 1004px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
   }

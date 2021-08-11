@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <!-- PAGE INFO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<meta
+      http-equiv="refresh"
+      content="3; URL='https://www.enseadadoscorais.com.br'"-->
+    />
+    <title>Administrador</title>
+
+    <!-- Icones -->
+
+    <link rel="stylesheet" href="/assets/fonts/style.css" />
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <nav class="container">
+        <div class="caixalogo">
+          <img src="../img/logoheader.gif" alt="logo marca da abbp" />
+          <a class="logo" href="#">Circuito<span>Abbp</span></a>
+        </div>
+
+        <div id="login-senha">
+          <div class="senha">
+            <label class="sr-only" for="senha">Senha</label>
+            <input
+              id="senha"
+              name="senha"
+              type="password"
+              minlength="4"
+              maxlength="8"
+              pattern="[A-Z0-9a-z]{4,8}"
+              title="Coloque no mínimo uma letra maiúcula e uma minúscula e números de 0 a 9, no máximo 8 digitos e no mínimo 4 digitos"
+              placeholder="digite senha"
+            />
+          </div>
+          <div class="login">
+            <label for="login" class="sr-only">Login</label>
+            <input
+              id="login"
+              name="login"
+              type="texto"
+              title="coloque seu login para entrar no sistema"
+              placeholder="digite login"
+            />
+          </div>
+          <div class="button-pesquisa">
+            <button class="pesquisa">Enviar</button>
+          </div>
+          <p>sair</p>
+        </div>
+
+        <!-- menu 
+        <div class="menu">
+          <ul class="grid">
+            <li><a class="title" href="#home">Início</a></li>
+            <li><a class="title" href="#parceiros">Parceiros</a></li>
+            <li><a class="title" href="#about">Nossa História</a></li>
+            <li><a class="title" href="#services">Calendário</a></li>
+            <li>
+              <a class="title" href="./filiacao/filiacao.html">Filiação</a>
+            </li>
+            <li>
+              <a class="title" href="./inscricao/inscricao.html">Inscrição</a>
+            </li>
+            <li>
+              <a class="title" href="./resultado/resultado.html">Resultados</a>
+            </li>
+            <li><a class="title" href="#testimonials">Equipe Abbp</a></li>
+            <li><a class="title" href="#contact">Contato</a></li>
+          </ul>
+        </div>-->
+        <!-- /menu 
+        <div class="toggle icon-menu"></div>
+        <div class="toggle icon-close"></div>-->
+      </nav>
+    </header>
+
+    <main>
+      <!-- admin -->
+      <section class="section" id="admin">
+        <div class="container grid">
+          <div class="pesquisa">
+            <div class="formulario">
+              <div class="input-group">
+                <label for="circuito" class="sr-only"> Circuito </label>
+                <input
+                  type="text"
+                  id="circuito"
+                  name="circuito"
+                  list="listacircuito"
+                  placeholder="Circuito"
+                  required
+                />
+                <span class="error"></span>
+              </div>
+              <div class="input-group">
+                <label for="ano" class="sr-only"> Ano </label>
+                <input
+                  type="number"
+                  id="ano"
+                  name="ano"
+                  list="listaano"
+                  placeholder="Ano do circuito"
+                  required
+                />
+                <span class="error"></span>
+              </div>
+              <div class="input-group">
+                <label for="categoria" class="sr-only"> Categoria </label>
+                <input
+                  type="text"
+                  id="categoria"
+                  name="categoria"
+                  list="listacategoria"
+                  placeholder="Categoria"
+                  required
+                />
+                <span class="error"></span>
+              </div>
+              <div class="input-group">
+                <label for="nome" class="sr-only"> Nome </label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Nome"
+                  required
+                />
+                <span class="error"></span>
+              </div>
+            </div>
+            <div class="button-pesquisa">
+              <button class="pesquisa">Enviar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <datalist id="listacircuito">
+      <option>Abbp</option>
+    </datalist>
+    <datalist id="listaano">
+      <option>2021</option>
+    </datalist>
+    <datalist id="listacategoria">
+      <option>Pro-Am Masculino</option>
+      <option>Pro-Am Feminino</option>
+      <option>Amador Masculino</option>
+      <option>Amador Feminino</option>
+      <option>Master</option>
+      <option>Grand Master</option>
+      <option>Legends</option>
+      <option>Grand Legends</option>
+      <option>iniciante</option>
+      <option>Escolinha Masculino</option>
+      <option>Escolinha Feminino</option>
+      <option>DK</option>
+      <option>Todas</option>
+    </datalist>
+    <footer class="section">
+      <div class="container grid">
+        <div class="brand">
+          <a class="logo logo-alt" href="#home">Circuito<span>Abbp</span></a>
+          <p>©2021 CircuitoAbbp.</p>
+          <p>Todos os direitos reservados.</p>
+        </div>
+
+        <div class="social grid">
+          <a href="https://instagram.com/abbpcircuito/" target="_blank">
+            <i class="icon-instagram"></i>
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <i class="icon-facebook"></i
+          ></a>
+          <i class="icon-youtube"></i>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#home" class="back-to-top"><i class="icon-arrow-up"></i></a>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- scrollreveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- main.js -->
+    <script src="/main.js"></script>
+  </body>
+</html>
